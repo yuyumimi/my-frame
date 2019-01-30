@@ -15,6 +15,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
         <!-- commons -->
+        <guava_version>27.0.1-jre</guava_version>
         <commons_email_version>1.5</commons_email_version>
         <commons_fileupload_version>1.3.2</commons_fileupload_version>
         <apollo_client_version>1.1.1</apollo_client_version>
@@ -40,23 +41,24 @@
         <jetty_version>9.4.11.v20180605</jetty_version>
         <jstl_version>1.2</jstl_version>
         <!-- log -->
-        <slf4j.version>1.7.25</slf4j.version>
+        <slf4j_version>1.7.25</slf4j_version>
         <jcl_version>1.2</jcl_version>
         <log4j_version>1.2.16</log4j_version>
         <logback_version>1.2.2</logback_version>
         <log4j2_version>2.11.1</log4j2_version>
         <!-- database -->
-        <alibaba_druid_version>1.1.6</alibaba_druid_version>
-        <mysql_version>5.1.46</mysql_version>
-        <mybatis_version>3.2.8</mybatis_version>
-        <mybaits_spring_version>1.3.1</mybaits_spring_version>
+        <alibaba_druid_version>1.1.12</alibaba_druid_version>
+        <mysql_version>8.0.14</mysql_version>
+        <mybatis_version>3.4.6</mybatis_version>
+        <mybaits_spring_version>1.3.2</mybaits_spring_version>
         <!-- json -->
         <jackson_version>2.9.5</jackson_version>
         <gson_version>2.8.5</gson_version>
         <fastjson_version>1.2.46</fastjson_version>
 
         <apache_httpclient_version>4.5.5</apache_httpclient_version>
-        <kaptcha_version>2.3</kaptcha_version>
+        <apache_httpcore_version>4.4.11</apache_httpcore_version>
+        <kaptcha_version>2.3.2</kaptcha_version>
         <lombok_version>1.16.18</lombok_version>
 
         <junit_version>4.12</junit_version>
@@ -77,6 +79,11 @@
             </dependency>
             <!-- Spring End -->
             <!-- Common libs -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava_version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
@@ -221,6 +228,11 @@
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore</artifactId>
+                <version>${apache_httpcore_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>fluent-hc</artifactId>
                 <version>${apache_httpclient_version}</version>
             </dependency>
@@ -233,7 +245,7 @@
 
             <!-- Google Code Begin -->
             <dependency>
-                <groupId>com.google.code.kaptcha</groupId>
+                <groupId>com.github.penggle</groupId>
                 <artifactId>kaptcha</artifactId>
                 <version>${kaptcha_version}</version>
             </dependency>
@@ -269,7 +281,7 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>${slf4j.version}</version>
+                <version>${slf4j_version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
